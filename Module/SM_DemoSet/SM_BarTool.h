@@ -10,8 +10,8 @@
 #define SM_BARTOOL_H
 
 #include <QWidget>
-class QHBoxLayout;
-class QVBoxLayout;
+class QPushButton;
+class SM_ToolPlot;
 class SM_BarTool : public QWidget
 {
     Q_OBJECT
@@ -21,10 +21,12 @@ public:
 signals:
 
 public slots:
-
 private:
-    QVBoxLayout* m_pVLay;
-    QHBoxLayout* m_pHLay;
+    void slotShowPlot();
+private:
+   //QPushButton* m_pbtnPlot;
+    SM_ToolPlot* m_pPlot;
+
 
 
 

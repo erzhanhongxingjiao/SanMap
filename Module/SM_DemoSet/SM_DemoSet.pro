@@ -55,7 +55,7 @@ SOURCES += \
     SM_LoaderTile.cpp \
     SM_Thread.cpp \
     SM_BarTool.cpp \
-    SM_BarToolPlot.cpp
+    SM_ToolPlot.cpp
 
 HEADERS +=\
         sm_demoset_global.h \
@@ -64,7 +64,7 @@ HEADERS +=\
     SM_LoaderTile.h \
     SM_Thread.h \
     SM_BarTool.h \
-    SM_BarToolPlot.h
+    SM_ToolPlot.h
 
 unix {
     target.path = /usr/lib
