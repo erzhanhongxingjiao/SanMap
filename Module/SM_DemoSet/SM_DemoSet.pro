@@ -40,12 +40,12 @@ INCLUDEPATH += ../../../3rdParty/include\
 CONFIG(debug, debug|release){
     DESTDIR = $$PWD/../../../build/bin/Debug
     TARGET = SM_DemoSetd
-    LIBS += -L../../../3rdParty/lib -lqgis_cored -lqgis_guid -lVBF_SliceByProd
+    LIBS += -L$$PWD/../../../3rdParty/lib -lqgis_cored -lqgis_guid -lVBF_SliceByProd
 
 }else{
     DESTDIR = $$PWD/../../../build/bin/Release
     TARGET = SM_DemoSet
-    LIBS += -L../../../3rdParty/lib -lqgis_core -lqgis_gui -lVBF_SliceByPro
+    LIBS += -L$$PWD/../../../3rdParty/lib -lqgis_core -lqgis_gui -lVBF_SliceByPro
 }
 
 
@@ -53,14 +53,18 @@ SOURCES += \
     SM_DemoBase.cpp \
     SM_ShowMap.cpp \
     SM_LoaderTile.cpp \
-    SM_Thread.cpp
+    SM_Thread.cpp \
+    SM_BarTool.cpp \
+    SM_BarToolPlot.cpp
 
 HEADERS +=\
         sm_demoset_global.h \
     SM_DemoBase.h \
     SM_ShowMap.h \
     SM_LoaderTile.h \
-    SM_Thread.h
+    SM_Thread.h \
+    SM_BarTool.h \
+    SM_BarToolPlot.h
 
 unix {
     target.path = /usr/lib

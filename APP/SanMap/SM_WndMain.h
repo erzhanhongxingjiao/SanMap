@@ -1,5 +1,5 @@
 ﻿//**************************************************************************
-// 文件：  SM_WndMain.h
+// 文件：  SM_WndMain.h(2019-8-1)
 // 描述：  SanMap Demo主窗口
 // 作者：  w_s_y
 // 最近更新时间：  2019-8-1
@@ -36,6 +36,7 @@ private slots:
 
 private:
     void Init();
+    //void InitControls();
 
 private:
     Ui::SM_WndMain *ui;

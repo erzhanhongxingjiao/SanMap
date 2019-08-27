@@ -22,7 +22,7 @@ CONFIG(debug, debug|release){
 }else{
     DESTDIR = $$PWD/../../../build/bin/Release
     TARGET = SanMap
-    LIBS += ../../../build/bin/Release/SM_DemoSet.lib
+    LIBS += $$PWD/../../../build/bin/Release/SM_DemoSet.lib
 }
 
 SOURCES += main.cpp\

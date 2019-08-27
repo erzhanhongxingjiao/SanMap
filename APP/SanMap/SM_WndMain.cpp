@@ -1,5 +1,6 @@
 ﻿#include <QHBoxLayout>
-
+#include <QtGui>
+#include
 #include "SM_WndMain.h"
 #include "ui_SM_WndMain.h"
 
@@ -41,4 +42,21 @@ void SM_WndMain::Init()
     m_pMap->SetSearchPath("E:/QGIS-2.18.5/data/MapTiles/Common");
     m_pMap->SetDataType(SM_ShowMap::RASTER);
     m_pMap->ShowMap();
+
+    //初始化控件
+}
+
+void SM_WndMain::InitControls()
+{
+    QgsMapCanvas* pCanvas = &m_pMap->GetCanvas();
+    //自定义工具栏
+    QWidget* pToolBar = new QWidget((QWidget*)pCanvas);
+    pToolBar->resize(50,50);
+    QVBoxLayout* pvLayout = new QVBoxLayout(pToolBar);
+
+    QPushButton* pbtnPlot = new QPushButton();//工具
+    pvLayout->addWidget(pbtnPlot);
+
+    pToolBar->move(pCanvas);
+
 }
